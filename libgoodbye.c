@@ -1,0 +1,3 @@
+void goodbye(){
+    printf("\nGoodbye");
+}
