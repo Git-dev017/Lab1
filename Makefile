@@ -1,9 +1,9 @@
 #Makefile for project
-all: main.o greetings.a
-	gcc -o hello_bin main.o -L. -greetings
+all: hello.o greetings.a
+	gcc -o hello_bin hello.o -L. -greetings
   
-main.o: main.c
-	gcc -c main.c
+hello.o: hello.c
+	gcc -c hello.c
 
 greetings.a: libhello.o libgoodbye.o
 	ar cr greetings.a libhello.o libgoodbye.o
