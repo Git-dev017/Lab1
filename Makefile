@@ -1,4 +1,3 @@
-#Makefile for project
 all: hello.o greetings.a
 	gcc -o hello_bin hello.o -L. -greetings
   
