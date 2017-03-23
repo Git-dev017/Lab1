@@ -1,3 +1,3 @@
-#include "greetings.h"
+#include <stdio.h>
 void hello();
 void goodbye();
