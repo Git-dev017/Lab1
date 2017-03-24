@@ -1,5 +1,5 @@
 all: hello.o libgoodbye.a libhello.so
-	gcc hello.o libgoodbye.a libhello.so -o hello
+	gcc -o hello hello.o libgoodbye.a libhello.so -rpath
 
 libhello.o: libhello.c hello.h
 	gcc -c -fPIC libhello.c
