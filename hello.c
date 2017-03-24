@@ -1,5 +1,5 @@
 
-#include "greetings.h"
+#include "hello.h"
 int main(){
     printf("Start\n");
     hello_function();

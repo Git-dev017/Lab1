@@ -1,11 +1,11 @@
 all: hello.o greetings.a
-	gcc -o hello hello.o -L. -greetings
+	gcc -o hello hello.o -L. -lhello
   
 hello.o: hello.c
 	gcc -c hello.c
 
-greetings.a: libhello.o libgoodbye.o
-	ar cr greetings.a libhello.o libgoodbye.o
+lib_hello.a: libhello.o libgoodbye.o
+	ar cr lib_hello.a libhello.o libgoodbye.o
 
 libhello.o: libhello.c
 	gcc -c libhello.c
