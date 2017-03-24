@@ -1,5 +1,5 @@
 all: hello.o greetings.a
-	gcc -o hello hello.o -L. -lhello
+	gcc -o hello hello.o -L. -lib_hello
   
 hello.o: hello.c
 	gcc -c hello.c
