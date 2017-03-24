@@ -1,5 +1,5 @@
-all: hello.o libgreets.a
-	gcc hello.o libgreets.a libhello.so -o hello
+all: hello.o libggoodbye.a
+	gcc hello.o libgoodbye.a libhello.so -o hello
   
 hello.o: hello.c hello.h
 	gcc -c hello.c
@@ -9,9 +9,6 @@ libgoodbye.a: libgoodbye.o
 
 libhello.so: libhello.o
 	gcc -shared -o libhello.so libhello.o
-
-libs:
-	
 
 libhello.o: libhello.c hello.h
 	gcc -c libhello.c
