@@ -1,11 +1,14 @@
-binary: hello.o libgreets.a
-	gcc hello.o -llibgreets.a -o hello
+all: hello.o libgreets.a
+	gcc hello.o libgreets.a libhello.so -o hello
   
 hello.o: hello.c hello.h
 	gcc -c hello.c
 
-libgreets.a: libhello.o libgoodbye.o
+libgoodbye.a: libgoodbye.o
 	ar cr libgreets.a libhello.o libgoodbye.o
+
+libhello.so: libhello.o
+	gcc -shared -o libhello.so libhello.o
 
 libhello.o: libhello.c hello.h
 	gcc -c libhello.c
