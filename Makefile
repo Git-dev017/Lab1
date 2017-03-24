@@ -15,4 +15,3 @@ libgoodbye.o: libgoodbye.c
 
 clean:
 	rm -f *.o *.a hello_bin
-	
