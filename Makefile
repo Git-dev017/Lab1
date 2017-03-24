@@ -11,7 +11,7 @@ hello.o: hello.c hello.h
 	gcc -c hello.c
 
 libgoodbye.a: libgoodbye.o
-	ar cr libgreets.a libhello.o libgoodbye.o
+	ar rv libgreets.a libhello.o libgoodbye.o
 
 libhello.so: libhello.o
 	gcc -shared -o libhello.so libhello.o
