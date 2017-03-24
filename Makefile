@@ -10,6 +10,9 @@ libgoodbye.a: libgoodbye.o
 libhello.so: libhello.o
 	gcc -shared -o libhello.so libhello.o
 
+libs:
+	
+
 libhello.o: libhello.c hello.h
 	gcc -c libhello.c
 
