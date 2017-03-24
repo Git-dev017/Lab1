@@ -1,4 +1,4 @@
 
 #include <stdio.h>
-void hello();
-void goodbye();
+void hello_function();
+void goodbye_function();

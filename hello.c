@@ -2,8 +2,8 @@
 #include "greetings.h"
 int main(){
     printf("Start\n");
-    hello();
-    goodbye();
+    hello_function();
+    goodbye_function();
     printf("\nEnd\n");
     return 0;
 }

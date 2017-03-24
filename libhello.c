@@ -1,4 +1,4 @@
 #include "greetings.h"
-void hello(){
+void hello_function(){
     printf("\nHello!");
 }

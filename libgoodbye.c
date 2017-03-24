@@ -1,4 +1,4 @@
 #include "greetings.h"
-void goodbye(){
+void goodbye_function(){
     printf("\nGoodbye");    
 }
