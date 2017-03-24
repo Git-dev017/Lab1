@@ -1,5 +1,5 @@
 binary: hello.o libgreets.a
-	gcc -o hello hello.o -L. -llibgreet
+	gcc -o hello hello.o -llibgreets
   
 hello.o: hello.c
 	gcc -c hello.c
