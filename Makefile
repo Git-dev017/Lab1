@@ -2,7 +2,7 @@ all: hello.o libgoodbye.a libhello.so
 	gcc hello.o libgoodbye.a libhello.so -o hello
 
 libhello.o: libhello.c hello.h
-	gcc -c libhello.c
+	gcc -c -fPIC libhello.c
 
 libgoodbye.o: libgoodbye.c hello.h
 	gcc -c libgoodbye.c
