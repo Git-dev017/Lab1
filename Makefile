@@ -17,4 +17,4 @@ libhello.so: libhello.o
 	gcc -shared -o libhello.so libhello.o
 
 clean:
-	rm -f *.o *.a hello
+	rm -f *.o *.a *.so hello
