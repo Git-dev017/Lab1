@@ -13,12 +13,13 @@ hello.o: hello.c hello.h
 libs: libgoodbye.o libhello.o
 	ar rv libgoodbye.a libgoodbye.o
 	gcc -shared -o libhello.so libhello.o
+	rm -f *.o
 
-#libgoodbye.a: libgoodbye.o
-#	ar rv libgoodbye.a libgoodbye.o
+libgoodbye.a: libgoodbye.o
+	ar rv libgoodbye.a libgoodbye.o
 
-#libhello.so: libhello.o
-#	gcc -shared -o libhello.so libhello.o
+libhello.so: libhello.o
+	gcc -shared -o libhello.so libhello.o
 
 clean:
 	rm -f *.o *.a *.so hello
