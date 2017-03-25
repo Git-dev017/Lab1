@@ -1,5 +1,5 @@
 all: hello.o libgoodbye.a libhello.so
-	gcc -o hello hello.o libgoodbye.a libhello.so
+	gcc -o hello hello.o libgoodbye.a libhello.a
 
 libhello.o: libhello.c hello.h
 	gcc -c -fPIC libhello.c
@@ -12,14 +12,18 @@ hello.o: hello.c hello.h
 
 libs: libgoodbye.o libhello.o
 	ar rv libgoodbye.a libgoodbye.o
-	gcc -shared -o libhello.so libhello.o
+	ar rv libhello.a libhello.o
+#	gcc -shared -o libhello.so libhello.o
 	rm -f *.o
 
 libgoodbye.a: libgoodbye.o
 	ar rv libgoodbye.a libgoodbye.o
 
-libhello.so: libhello.o
-	gcc -shared -o libhello.so libhello.o
+libhello.a: libhello.o
+	ar rv libhello.a libhello.o
+
+#libhello.so: libhello.o
+#	gcc -shared -o libhello.so libhello.o
 
 clean:
 	rm -f *.o *.a *.so hello
