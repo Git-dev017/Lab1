@@ -1,4 +1,4 @@
-all: hello.o libgoodbye.a libhello.so
+all: hello.o libgoodbye.a libhello.a
 	gcc -o hello hello.o libgoodbye.a libhello.a
 
 libhello.o: libhello.c hello.h
