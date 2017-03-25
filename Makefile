@@ -1,5 +1,5 @@
 all: hello.o libgoodbye.a libhello.so
-	gcc -o hello hello.o libgoodbye.a libhello.so -rpath $pwd
+	gcc -o hello hello.o libgoodbye.a libhello.so
 
 libhello.o: libhello.c hello.h
 	gcc -c -fPIC libhello.c
@@ -21,4 +21,4 @@ libs: libgoodbye.o libhello.o
 #	gcc -shared -o libhello.so libhello.o
 
 clean:
-	rm -f *.o *.a hello
+	rm -f *.o *.a *.so hello
